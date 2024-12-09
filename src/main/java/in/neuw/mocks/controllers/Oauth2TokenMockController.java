@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Oauth2TokenMockController {
 
-    @PostMapping("/oauth2/v2/token")
+    @PostMapping("/oauth2/token")
     public Oauth2TokenResponse getOauth2Token(@ModelAttribute(name = "client_id") String clientId,
                                               @ModelAttribute("client_secret") String clientSecret,
                                               @ModelAttribute("grant_type") String grant,
