@@ -2,7 +2,7 @@ This is a mock server for validating the oauth2 client based in the other repo [
 
 This one is for mocking the oauth2 token endpoint and a mock resource endpoint /ping
 
-Oauth2 Token endpoint is mainly focused for the client credentials grant type
+Oauth2 Token endpoint is mainly focused for the client credentials grant type.
 
 **These are the mocked endpoint details:-**
 
@@ -20,6 +20,11 @@ Why two ports? To mimic a different set of config(mtls / non mtls) for oauth2 to
 8453 is easy and straight forward to consume.
 
 While 8443 is needed to mock enable the client auth aka mutual TLS!
+
+For commands to setup certificates one may use 
+
+- OPENSSL, instruction [here](https://github.com/krnbr/openssl-essential-commands)
+- [STEP CLI](https://smallstep.com/docs/step-cli/), instructions [here](https://github.com/krnbr/certs-using-step)
 
 It makes use of the same SSL config when running on https for the 8453, but if you want it run on http port, just provide the properties like below:-
 
