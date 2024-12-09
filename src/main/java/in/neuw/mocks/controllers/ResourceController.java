@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ResourceController {
 
-    @GetMapping("/ping")
+    @GetMapping("/mock/ping")
     public HealthStatus ping(@RequestHeader("Authorization") String token,
                              HttpServletRequest request) {
         log.info("input Authorization - {} on port - {}", token, request.getServerPort());
